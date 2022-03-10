@@ -1,0 +1,149 @@
+:root {
+  --color-light-cyan: hsl(193, 38%, 86%);
+  --color-neon-green: hsl(150, 100%, 66%);
+  --color-neon-green-light: hsl(150, 100%, 70%);
+  --color-grayish-blue: hsl(217, 19%, 38%);
+  --color-dark-grayish: hsl(217, 19%, 24%);
+  --color-dark-blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1;
+}
+
+.container {
+  background-color: var(--color-dark-blue);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dvice__app {
+  background-color: var(--color-dark-grayish);
+  border-radius: 1.6rem;
+  padding: 0 2.6rem;
+  width: 37%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.dvice__app--id {
+  font-size: 1rem;
+  color: var(--color-neon-green);
+  padding-top: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.dvice__app--text {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-light-cyan);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.dvice__app--divider {
+  padding-top: 1.6rem;
+}
+
+.dvice__app--dice {
+  background: none;
+  border: none;
+  background-color: var(--color-neon-green);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  transform: translateY(2.4rem);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dvice__app--dice:hover {
+  box-shadow: 0 0 3rem var(--color-neon-green-light);
+}
+
+.dice__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.attribution {
+  background-color: var(--color-dark-blue);
+  padding-bottom: 1.6rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-light-cyan);
+}
+
+.attribution a {
+  color: var(--color-neon-green);
+}
+
+/* Media Queries */
+/* 1200px */
+@media (max-width: 75em) {
+  .dvice__app {
+    width: 45%;
+  }
+
+  .dvice__app--divider {
+    display: flex;
+    justify-content: center;
+  }
+
+  .divider__icon {
+    width: 90%;
+  }
+}
+
+/* 1000px */
+@media (max-width: 62.5em) {
+  .dvice__app {
+    width: 60%;
+  }
+}
+
+/* 800px */
+@media (max-width: 50em) {
+  .dvice__app {
+    width: 75%;
+  }
+}
+
+/* 600px */
+@media (max-width: 37.5em) {
+  .dvice__app {
+    width: 90%;
+  }
+}
+
+/* 450px */
+@media (max-width: 28.2rem) {
+  .dvice__app {
+    width: 95%;
+  }
+
+  .dvice__app--text {
+    font-size: 2.4rem;
+  }
+}
